@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+    ),
+    url("img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.center-image {
+    text-align: center;
+    margin: -20px 0;
+    background-color: aliceblue;
+    padding: 50px;
+}
+
+.center-image img {
+    width: 60%;       /* adjust size */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.Overview{
+    padding: 0px;
+    background-color: #005cbf;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    text-decoration-color: aliceblue; 
+}
+/* HERO */
+.placement-hero {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: white;
+    background: linear-gradient(to right, #003c8f, #005cbf);
+}
+.placement-hero h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.placement-hero p {
+    font-size: 20px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+.stat-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.stat-box h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #005cbf;
+}
+
+.something{
+    background-color: rgb(100, 100, 245);
+    padding: 15px;
+}
+
+.something h1{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.mission{
+    background-color: rgb(100, 100, 245);
+    padding: 0px;
+}
+
+.mission h1{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.vision{
+    background-color: rgb(100, 100, 245);
+    padding: 0px;
+
+}
+
+.vision h1{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+/* PROCESS */
+.process {
+    text-align: center;
+    padding: 40px;
+}
+
+.process h2{
+    color: aliceblue;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.step {
+    background: white;
+    padding: 20px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.step span {
+    background: #005cbf;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* RECRUITERS */
+.recruiters {
+    text-align: center;
+    padding: 55px;
+    color: aliceblue;
+}
+.logo-slider {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 20px;
+}
+.logo-slider img {
+    width: 150px;
+    height: auto;
+    filter: grayscale(0);
+    transition: 0.3s;
+}
+.logo-slider img:hover {
+    transform: scale(1.1);
+}
+
+/* SUCCESS STORIES */
+.stories {
+    padding: 40px;
+    text-align: center;
+}
+.story-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.story-card {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.story-card img {
+    width: 100%;
+    border-radius: 10px;
+}

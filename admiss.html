@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Aether University</title>
+    <link rel="stylesheet" href="admiss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+         <img src="logo.png" alt="Dayananda Sagar University">
+        <div class="logo"></div>
+       
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#process">How to Apply</a></li>
+                <li><a href="#deadlines">Deadlines</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#" class="btn-nav">Apply Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Future Starts Here.</h1>
+            <p>Ready to join a community of innovators and leaders? Learn about our application process.</p>
+            <a href="application.html" class="btn-primary">Start Your Application Today</a>
+        </div>
+    </section>
+
+    <section id="process" class="process-section">
+        <h2>Admissions in 3 Simple Steps</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Research & Plan</h3>
+                <p>Explore our programs, financial aid options, and application requirements.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Prepare & Submit</h3>
+                <p>Gather transcripts, letters of recommendation, and complete the online application.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Interview & Decide</h3>
+                <p>Attend a virtual interview (if required) and await your admission decision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="deadlines" class="deadlines-section">
+        <h2>Key Deadlines & Requirements</h2>
+        <div class="deadlines-content">
+            <div class="deadlines-table">
+                <h3>Application Dates</h3>
+                <table>
+                    <tr><th>Action</th><th>Date</th></tr>
+                    <tr><td>Early Decision Deadline</td><td>Nov 15</td></tr>
+                    <tr><td>Regular Decision Deadline</td><td>Jan 1</td></tr>
+                    <tr><td>Financial Aid Deadline</td><td>Feb 15</td></tr>
+                </table>
+            </div>
+            <div class="requirements-list">
+                <h3>Required Documents</h3>
+                <ul>
+                    <li>Completed Online Application</li>
+                    <li>Official High School Transcripts</li>
+                    <li>Two Letters of Recommendation</li>
+                    <li>Standardized Test Scores (Optional)</li>
+                    <li>$50 Application Fee</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Admissions</h3>
+                <p>Email: admissions@aether.edu</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Office Hours: Mon - Fri, 9am - 5pm</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Campus Tour</a></li>
+                    <li><a href="#">Financial Aid</a></li>
+                    <li><a href="#">Student Life</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Aether University Admissions
+        </div>
+    </footer>
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KCET Allotment — Admission Guide Chatbot</title>
+  <style>
+    /* --- Basic widget styling --- */
+    :root{
+      --primary:#0b5cff;
+      --bg:#f7f9ff;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#e6f0ff;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(11,92,255,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Floating button */
+    .chat-toggle {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      background: linear-gradient(180deg,var(--primary),#0849d6);
+      box-shadow: 0 8px 24px rgba(11,92,255,0.18);
+      border: none;
+      color: white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      z-index:9999;
+    }
+    .chat-toggle:active { transform: translateY(1px); }
+
+    /* Chat window */
+    .chat-window {
+      position: fixed;
+      right: 24px;
+      bottom: 98px;
+      width: 360px;
+      max-width: calc(100% - 48px);
+      height: 520px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      z-index:9999;
+    }
+    .chat-header{
+      padding: 12px 14px;
+      background: linear-gradient(90deg,var(--primary),#3b82f6);
+      color: white;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .chat-header .title { font-weight:600; font-size:15px; }
+    .chat-header .subtitle { font-size:12px; opacity:0.95; color:rgba(255,255,255,0.9) }
+
+    .chat-body{
+      padding: 12px;
+      background: var(--bg);
+      flex:1;
+      overflow:auto;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .msg {
+      max-width: 85%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size:14px;
+      line-height:1.3;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    .bot { background:var(--card); align-self:flex-start; color:#111827; border: 1px solid #f0f3ff; }
+    .user { background:var(--primary); color:white; align-self:flex-end; }
+
+    .quick-replies { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+    .chip {
+      background: white;
+      border: 1px solid #e6e9f2;
+      padding: 8px 10px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-size:13px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+
+    .chat-footer{
+      padding:10px;
+      border-top: 1px solid #edf2ff;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+    }
+    .chat-input{
+      flex:1;
+      padding:10px 12px;
+      border-radius: 999px;
+      border: 1px solid #e6ebff;
+      outline:none;
+      font-size:14px;
+      background: white;
+    }
+    .send-btn{
+      background:var(--primary);
+      color:white;
+      border:none;
+      padding:9px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    /* small screens */
+    @media (max-width:420px){
+      .chat-window { right:12px; left:12px; width:auto; height:70vh; bottom:84px; }
+      .chat-toggle { right:12px; bottom:18px; }
+    }
+
+    /* helper */
+    .muted { color:var(--muted); font-size:13px; }
+    .link { color:var(--primary); text-decoration:underline; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating button -->
+  <button class="chat-toggle" id="toggleBtn" title="Admission Guide">
+    <!-- simple chat icon -->
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="white"></path>
+    </svg>
+  </button>
+
+  <!-- Chat window -->
+  <aside class="chat-window" id="chatWindow" role="dialog" aria-label="Admission guide chatbot">
+    <div class="chat-header">
+      <div>
+        <div class="title">Admissions Assistant</div>
+        <div class="subtitle">Guidance after KCET college allotment</div>
+      </div>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <!-- messages will be injected here -->
+    </div>
+
+    <div class="chat-footer">
+      <input id="userInput" class="chat-input" placeholder="Ask something like: 'How do I report to college?'" />
+      <button id="sendBtn" class="send-btn">Send</button>
+    </div>
+  </aside>
+
+  <script>
+    /***************************************
+     * Client-side rule-based chatbot logic
+     * - Easy to update mapping (responses)
+     * - Quick replies for common tasks
+     ***************************************/
+
+    // Replace these with your college's real links/contact info
+    const CONFIG = {
+      helpdeskEmail: "admissions@yourcollege.edu",
+      helpdeskPhone: "+91-80-1234-5678",
+      allotmentStatusUrl: "https://yourcollege.edu/check-allotment", // placeholder
+      paymentPortal: "https://yourcollege.edu/pay-fees",
+      docsChecklistUrl: "https://yourcollege.edu/docs-checklist",
+      reportingGuidelines: "https://yourcollege.edu/reporting-instructions"
+    };
+
+    const prebuiltFlows = [
+      {
+        id: "check_allotment",
+        triggers: ["allotment", "check allotment", "kcet allotment", "allotted", "my allotment"],
+        reply: `To check your KCET allotment status, visit the official allotment portal or use this college page: ${CONFIG.allotmentStatusUrl}. Enter your application number and date of birth.`
+      },
+      {
+        id: "accept_allotment",
+        triggers: ["accept", "confirm seat", "how to accept", "seat confirmation"],
+        reply: `If your seat is allotted and you want to accept it: 
+1. Read the official KCET & college instructions. 
+2. Pay the required acceptance fee (if any) through the portal. 
+3. Follow the reporting schedule (report to the allotted college on the dates given). For college-specific reporting steps, see: ${CONFIG.reportingGuidelines}`
+      },
+      {
+        id: "documents",
+        triggers: ["documents", "document verification", "docs", "what documents"],
+        reply: `Typical documents needed for college reporting / verification:
+• KCET allotment order / printout 
+• CET score card 
+• 10th & 12th marksheets & certificates 
+• Transfer certificate and migration certificate (if applicable)
+• Caste / category & income certificates (if applicable)
+• Passport-size photos & ID proof
+Full checklist: ${CONFIG.docsChecklistUrl}`
+      },
+      {
+        id: "fee_payment",
+        triggers: ["fee", "payment", "pay fees", "how to pay"],
+        reply: `Most colleges ask you to pay an initial tuition or acceptance fee online. Use the payment portal: ${CONFIG.paymentPortal}. Keep a screenshot/receipt for your records.`
+      },
+      {
+        id: "reporting",
+        triggers: ["report", "reporting", "report to college", "join college"],
+        reply: `Reporting steps (typical):
+1. Complete online acceptance and fee payment (if asked). 
+2. Reach college on the reporting date with original documents and photocopies. 
+3. Attend document verification and counselling (if required). 
+4. Complete admission formalities and collect enrollment details. Check: ${CONFIG.reportingGuidelines}`
+      },
+      {
+        id: "contact",
+        triggers: ["contact", "help", "admissions office", "phone", "email"],
+        reply: `Admissions helpdesk:
+Email: ${CONFIG.helpdeskEmail}
+Phone: ${CONFIG.helpdeskPhone}
+You can call during college working hours for quicker response.`
+      }
+    ];
+
+    // Utility: append message to chat body
+    const chatBody = document.getElementById('chatBody');
+    function addMessage(text, sender = 'bot', html=false) {
+      const el = document.createElement('div');
+      el.className = 'msg ' + (sender === 'bot' ? 'bot' : 'user');
+      if(html){
+        el.innerHTML = text;
+      }else{
+        el.textContent = text;
+      }
+      chatBody.appendChild(el);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    // Add quick reply chips (single-use)
+    function addQuickReplies(chips = []) {
+      const container = document.createElement('div');
+      container.className = 'quick-replies';
+      chips.forEach(c => {
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.textContent = c.label;
+        chip.onclick = () => handleUserMessage(c.payload || c.label);
+        container.appendChild(chip);
+      });
+      chatBody.appendChild(container);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    // Simple NLP: match trigger keywords
+    function findBestFlow(msg) {
+      const q = msg.toLowerCase();
+      // exact phrase match first
+      for (const flow of prebuiltFlows) {
+        for (const t of flow.triggers) {
+          if (q.includes(t)) return flow;
+        }
+      }
+      return null;
+    }
+
+    // Conversational handler
+    async function handleUserMessage(raw) {
+      const text = raw.trim();
+      if (!text) return;
+
+      // show user's message
+      addMessage(text, 'user');
+
+      // show typing indicator
+      const typing = document.createElement('div');
+      typing.className = 'msg bot';
+      typing.textContent = 'Typing…';
+      chatBody.appendChild(typing);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // small delay to feel natural
+      await new Promise(r => setTimeout(r, 450));
+
+      // remove typing
+      chatBody.removeChild(typing);
+
+      // try to match rule-based flow
+      const flow = findBestFlow(text);
+      if (flow) {
+        addMessage(flow.reply, 'bot', true);
+        // suggested next steps
+        addQuickReplies([
+          {label: 'Documents checklist', payload: 'documents'},
+          {label: 'Fee payment link', payload: 'fee'},
+          {label: 'Contact admissions', payload: 'contact'}
+        ]);
+        return;
+      }
+
+      // Simple fallback heuristics
+      if (/where|how|when|what/.test(text.toLowerCase())) {
+        addMessage(`I can help with: checking allotment, document checklist, the reporting process, fee payment, and contact details. Try: "documents", "pay fees", "report to college", or "contact".`, 'bot');
+        addQuickReplies([
+          {label: 'Check allotment', payload: 'check allotment'},
+          {label: 'Reporting steps', payload: 'reporting'},
+          {label: 'Contact helpdesk', payload: 'contact'}
+        ]);
+        return;
+      }
+
+      // If user asks for something unknown
+      addMessage(`Sorry — I didn't fully understand. You can try keywords like "allotment", "documents", "fee", "report", or "contact".`, 'bot');
+      addQuickReplies([
+        {label: 'Documents checklist', payload: 'documents'},
+        {label: 'Check allotment', payload: 'check allotment'},
+      ]);
+    }
+
+    // Hook up UI
+    const toggleBtn = document.getElementById('toggleBtn');
+    const chatWindow = document.getElementById('chatWindow');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    toggleBtn.addEventListener('click', () => {
+      if (chatWindow.style.display === 'flex') {
+        chatWindow.style.display = 'none';
+      } else {
+        chatWindow.style.display = 'flex';
+        // first message if empty
+        if (!chatBody.hasChildNodes()) {
+          addMessage("Hello! I'm the Admissions Assistant. Tell me what you need: check allotment, documents, fees, or reporting steps.", 'bot');
+          addQuickReplies([
+            {label: 'Check allotment', payload: 'check allotment'},
+            {label: 'Documents checklist', payload: 'documents'},
+            {label: 'How to report', payload: 'reporting'}
+          ]);
+        }
+      }
+    });
+
+    sendBtn.addEventListener('click', () => {
+      handleUserMessage(userInput.value);
+      userInput.value = '';
+      userInput.focus();
+    });
+
+    userInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendBtn.click();
+      }
+    });
+
+    // Accessibility: close on Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') chatWindow.style.display = 'none';
+    });
+
+    // Optional: pre-fill a welcome message on page load (collapsed)
+    // (Uncomment if you want chat to auto-open)
+    // window.addEventListener('load', () => toggleBtn.click());
+
+  </script>
+</body>
+</html>
+
+
+</body>
+</html>

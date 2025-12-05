@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f8fc;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    background: #002147;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-btn {
+    background: #ffb400;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+    height: 70vh;
+    background: url('college.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    margin: 15px 0;
+}
+
+.btn-primary {
+    background: #ffb400;
+    padding: 12px 25px;
+    border-radius: 6px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Sections */
+.section, .section-light {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.section h2, .section-light h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.section-light {
+    background: white;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Admission Process */
+.process {
+    display: flex;
+    justify-content: space-around;
+}
+
+.step {
+    width: 30%;
+    padding: 25px;
+    background: #eef3ff;
+    border-radius: 10px;
+}
+
+/* Fee Table */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fee-table th, .fee-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.fee-table th {
+    background: #002147;
+    color: white;
+}
+
+/* Documents */
+.doc-list {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+/* Footer */
+.footer {
+    background: #002147;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer .foot {
+    margin-top: 20px;
+    color: #ddd;
+}

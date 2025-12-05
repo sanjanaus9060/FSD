@@ -1,0 +1,159 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>University Website Design - Easy Tutorials</title>
+        <link rel="stylesheet" href="assignment2.css">
+    </head>
+    <body>
+        <!-- Top announcement bar -->
+        <div class="top-bar">
+            <p class="announcement">📅 ACADEMIC CALENDAR FOR 2025-26 — <a href="#">CLICK HERE</a> TO APPLY FOR OCT 2025 EXECUTIVE MBA BATCH. FOR PROGRAM DETAILS AND ADMISSION</p>
+            <div class="top-bar-right">
+                <input type="text" placeholder="Search ...">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <!-- Header with logo and institution name -->
+        <div class="header-top">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" height="100" width="250" alt="Institution logo" class="logo">
+                    <div class="institution-info">
+                        <h1>DAYANANDA SAGAR</h1>
+                        <p>UNIVERSITY</p>
+                    </div>
+                </div>
+                <div class="header-links">
+                    <span class="badge careers">CAREERS</span>
+                    <a href="#">Virtual Tour</a>
+                    <a href="#">Examination</a>
+                    <a href="#">News & Events</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Alumni</a>
+                    <a href="#">Blog</a>
+                    <a href="#">ERP</a>
+                    <a href="#">Login</a>
+                    <a href="#">e-Brochure</a>
+                    <span class="badge nri">NRI/FOREIGN ADMISSIONS - APPLY HERE</span>
+                    <select>
+                        <option>English</option>
+                        <option>Hindi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main navigation bar -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">UNIVERSITY</a></li>
+                <li><a href="#">ACADEMICS</a></li>
+                <li><a href="#">ADMISSIONS</a></li>
+                <li><a href="#">INTERNATIONAL</a></li>
+                <li><a href="#">RESEARCH</a></li>
+                <li><a href="#">INNOVATION</a></li>
+                <li><a href="#">PLACEMENT</a></li>
+                <li><a href="#">NAAC</a></li>
+                <li><a href="#">LIBRARY</a></li>
+                <li><a href="#">HOSTEL @ HAROHALLI</a></li>
+                <li><a href="#">PUBLIC SELF-DISCLOSURE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <section class="header">
+            <!-- Hero slider: fades between banner images. If you have a second banner, place it as ADDIMAGE/baner2.png -->
+            <div class="slider" aria-hidden="false">
+                <img src="college photo.jpg" alt="B.Tech Admissions 2026-27" class="slide">
+                <img src="2ndbanner.jpg" alt="B.Tech Admissions 2026-27 - alternate" class="slide">
+            </div>
+        </section>
+
+        <!-- Awards and Accreditations Section -->
+        <section class="awards-section">
+            <div class="awards-container">
+                <h2>Recognition & Accreditations</h2>
+                <div class="awards-row">
+                    <div class="award-item">
+                        <img src="rlogo2.png" height="700" width="850" alt="KSURE Rating - Teaching Excellence">
+                        <p>KSURE Rating</p>
+                    
+                        </div>
+            </div>
+        </section>
+
+        <!-- Programs & Schools Grid -->
+        <section class="programs-section"
+            <div class="programs-container">
+                <h2>Our Schools & Departments</h2>
+                <div class="programs-grid">
+                    <!-- Row 1 -->
+                    <div class="program-box">
+                        <h3>ENGINEERING</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>COMPUTER APPLICATIONS</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>SCHOOL OF LAW</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>APPLIED SCIENCES</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>COMMERCE & MANAGEMENT</h3>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="program-box">
+                        <h3>EXECUTIVE EDUCATION</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>ARTS, DESIGN AND HUMANITIES</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>DESIGN & DIGITAL TRANSMEDIA</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>HEALTH SCIENCES</h3>
+                    </div>
+                    <div class="program-box">
+                        <h3>MBBS</h3>
+                    </div>
+            </div>       </div>       
+        </section>
+        
+        <script>
+        // Simple fading slider — rotates slides every 5 seconds. If only one slide exists, nothing animates.
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = Array.from(document.querySelectorAll('.slider .slide'));
+            if (!slides.length) return;
+            // Set initial styles
+            slides.forEach((s, i) => {
+                s.style.position = 'absolute';
+                s.style.top = '0';
+                s.style.left = '0';
+                s.style.width = '100%';
+                s.style.height = '100%';
+                s.style.objectFit = 'cover';
+                s.style.transition = 'opacity 0.6s ease-in-out';
+                s.style.opacity = i === 0 ? '1' : '0';
+                s.style.zIndex = i === 0 ? '2' : '1';
+            });
+
+            if (slides.length <= 1) return; // nothing to rotate
+
+            let current = 0;
+            setInterval(() => {
+                const next = (current + 1) % slides.length;
+                slides[current].style.opacity = '0';
+                slides[current].style.zIndex = '1';
+                slides[next].style.opacity = '1';
+                slides[next].style.zIndex = '2';
+                current = next;
+            }, 2000);
+        });
+        </script>
+        </body>
+</html>
